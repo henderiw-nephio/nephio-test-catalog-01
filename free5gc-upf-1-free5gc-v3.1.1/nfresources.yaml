@@ -1,0 +1,19 @@
+apiVersion: resources.nephio.io/v1alpha1
+kind: NfNetworkResource
+metadata: # kpt-merge: default/free5gc-upf-1
+  name: free5gc-upf-1
+  namespace: default
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'resources.nephio.io|NfNetworkResource|default|free5gc-upf-1'
+spec:
+  namespace: upf-1
+  upfnad:
+    n3cni: macvlan
+    n3master: ens4
+    n3gw: 10.10.5.1
+    n4cni: macvlan
+    n4master: ens4
+    n4gw: 192.168.100.1
+    n6cni: macvlan
+    n6master: ens4
+    n6gw: 10.20.3.1
