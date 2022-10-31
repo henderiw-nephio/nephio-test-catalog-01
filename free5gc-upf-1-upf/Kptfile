@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /free5gc-upf-1-upf
+  name: free5gc-upf-1-upf
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|free5gc-upf-1-upf'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/henderiw-nephio/nephio-test-catalog-01
+    directory: nephio-upf-common
+    ref: main
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/henderiw-nephio/nephio-test-catalog-01
+    directory: nephio-upf-common
+    ref: main
+    commit: 0f7e6e92b10b997f2bb42cf61814ef9b9b5676f3
+info:
+  description: sample description
