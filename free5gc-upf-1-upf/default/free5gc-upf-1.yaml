@@ -1,0 +1,27 @@
+apiVersion: networkfunction.nephio.io/v1alpha1
+kind: Upf
+metadata:
+  name: free5gc-upf-1
+  namespace: default
+spec:
+  parent: upf-class-1
+  clustername: nephio-edge-1
+  namespace: upf-1
+  n6:
+    endpoints:
+      internet:
+        ipendpoints:
+          ipv4Addr:
+          - "YOUR_IPv4"
+          gwv4addr: "YOUR_IPv4_GW"
+        ipaddrpool: "YOUR_IPv4_POOL"
+  n3:
+    endpoints:
+    - ipv4Addr:
+      - "YOUR_IPv4"
+      gwv4addr: "YOUR_IPv4_GW"
+  n4:
+    endpoints:
+    - ipv4Addr:
+      - "YOUR_IPv4"
+      gwv4addr: "YOUR_IPv4_GW"
